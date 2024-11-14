@@ -1,0 +1,25 @@
+@extends('components.app')
+@section('content')
+    <div class="d-grid gap-2 col-2 mx-auto my-3">
+        <a href="" class=" btn btn-outline-primary">Tambah</a>
+    </div>
+    @if (Session::has('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+    @if (Session::has('fail'))
+        <div class="alert alert-danger">
+            {{ session('fail') }}
+        </div>
+    @endif
+    <table class="table table-striped text-center table-hover">
+            <tr class="table-primary">
+                <th>No</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+@endsection
